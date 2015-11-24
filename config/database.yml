@@ -1,0 +1,19 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: notifier
+  pool: 5
+  timeout: 5000
+  username: 
+  password:
+  prepared_statements: false
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: notifier
+  pool: 5
+  timeout: 5000
+  username: 
+  password:
+  prepared_statements: false
