@@ -4,6 +4,7 @@ gem "github_webhook"
 gem "octokit", "~> 4.0"
 
 gem "pg"
+gem "puma"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
