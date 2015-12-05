@@ -40,7 +40,7 @@ class ApplicationController < ActionController::Base
       build.message = "Hurray!"
     else
       build.last_status = "error"
-      build.message = "something weird happened, bug @guimonz"
+      build.message = "unexpected status received #{status}, please alert @guimonz"
     end
     build.save!
   end
