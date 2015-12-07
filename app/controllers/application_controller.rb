@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
   end
 
   def update_build_status(build, status)
-    if status.eql?("testing") || status.eql?("waiting")
+    if status.eql?("testing") || status.eql?("waiting") || status.eql?("initiated")
       build.last_status = "pending"
       build.message = "keep calm and carry on"
     elsif status.eql?("error") || status.eql?("stopped") || status.eql?("infrastructure_failure")
