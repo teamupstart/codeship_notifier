@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
     http = Net::HTTP.new("codeship.com", 443)
     http.use_ssl = true
     response = http.request_get("/api/v1/projects.json?api_key=#{ENV["CODESHIP_API_KEY"]}")
+    append_to_log(response.body)
     JSON.parse(response.body)
   end
 
@@ -53,5 +54,9 @@ class ApplicationController < ActionController::Base
     description_hash[:description] = build.message
     client.create_status(build.head_repository, build.commit, build.last_status, description_hash)
     client.create_status(build.base_repository, build.commit, build.last_status, description_hash)
+  end
+
+  def append_to_log(object)
+    puts object.inspect
   end
 end
