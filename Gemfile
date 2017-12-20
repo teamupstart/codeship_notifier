@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby "2.4.2"
+
 gem "github_webhook"
 gem "octokit", "~> 4.0"
 
