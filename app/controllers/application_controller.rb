@@ -11,7 +11,6 @@ class ApplicationController < ActionController::Base
     http = Net::HTTP.new("codeship.com", 443)
     http.use_ssl = true
     response = http.request_get("/api/v1/projects.json?api_key=#{ENV["CODESHIP_API_KEY"]}")
-    append_to_log(response.body)
     JSON.parse(response.body)
   end
 
