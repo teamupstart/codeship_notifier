@@ -12,8 +12,10 @@ Rails.application.configure do
   # preloads Rails for running tests, you may have to set it to true.
   config.eager_load = false
 
+  config.assets.enabled = false
+
   # Configure static file server for tests with Cache-Control for performance.
-  config.serve_static_files   = true
+  config.public_file_server.enabled = true
   config.static_cache_control = 'public, max-age=3600'
 
   # Show full error reports and disable caching.
