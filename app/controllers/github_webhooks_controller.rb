@@ -1,7 +1,7 @@
 class GithubWebhooksController < ApplicationController
   include GithubWebhook::Processor
 
-  def pull_request(payload)
+  def github_pull_request(payload)
     action = payload["action"]
 
     if action.eql?("opened") || action.eql?("reopened") || action.eql?("synchronize")
