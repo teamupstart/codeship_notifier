@@ -11,6 +11,6 @@ Whomever uses it, will need to:
 - GITHUB_ACCESS_KEY
 - GITHUB_WEBHOOK_SECRET
 
-2 - Will have to config gihtub to send a webhook to the server running this app (so this app knows when to add the notification in github)
+2 - Will have to config github to send a webhook to the server running this app (so this app knows when to add the notification in github)
 
 3 - Set codeship's webhook to ping this app after a build finishes (so this app know when to update the status in github)
